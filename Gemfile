@@ -6,5 +6,6 @@ git_source(:github) { |repo_name| "https://github.com/#{repo_name}" }
 
 group :chess_plugins do
   gem 'byebug', '~> 11.1', '>= 11.1.3'
+  gem 'colorize', '~> 0.8.1'
   gem 'rspec', '3.10.0'
 end
