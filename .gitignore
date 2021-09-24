@@ -1,0 +1,7 @@
+
+# Files to be ignored
+.byebugrc
+.byebug_history
+
+lib/byebug/byebug.so
+lib/byebug/byebug.bundle
