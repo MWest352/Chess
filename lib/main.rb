@@ -1,11 +1,16 @@
 # frozen_string_literal: true
 
 require_relative 'board'
-require 'colorize'
 require_relative 'display'
+require_relative 'prompts'
+require 'byebug'
+
 
 board = Board.new
 
 display = Display.new(board)
-puts display.render
 
+prompts = Prompts.new
+
+# prompts.welcome
+# display.print_board
