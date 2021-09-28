@@ -12,5 +12,10 @@ display = Display.new(board)
 
 prompts = Prompts.new
 
-# prompts.welcome
-# display.print_board
+def dirty_game_script(prompts, display)
+  system 'clear'
+  prompts.welcome
+  display.print_board
+end
+
+dirty_game_script(prompts, display)
