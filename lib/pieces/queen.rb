@@ -11,4 +11,8 @@ class Queen
   def display_queen
     puts @symbol
   end
+
+  def queen_moves
+    [[0, 1], [0, -1], [-1, 0], [1, 0], [1, 1], [1, -1], [-1, 1], [-1, -1]]
+  end
 end

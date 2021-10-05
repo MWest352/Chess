@@ -11,4 +11,8 @@ class Knight
   def display_knight
     puts @symbol
   end
+
+  def knight_moves
+    [[-1, -2], [1, 2], [-1, 2], [1, -2], [-2, -1], [2, 1], [-2, 1], [2, -1]]
+  end
 end

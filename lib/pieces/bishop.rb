@@ -11,4 +11,8 @@ class Bishop
   def display_bishop
     puts @symbol
   end
+
+  def bishop_moves
+    [[1, 1], [1, -1], [-1, 1], [-1, -1]]
+  end
 end
