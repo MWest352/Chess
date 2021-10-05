@@ -23,7 +23,7 @@ class Pawn
   def pawn_strike
     [[1, -1], [1, 1]]
   end
-  
+
   def en_passant
     # We'll figure this out after these messages
   end

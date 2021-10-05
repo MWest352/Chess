@@ -4,8 +4,8 @@
 class Prompts
 
   def welcome
-    puts "\nWelcome to Chess! 
-    \nTo play, input coordinates to select the piece you'd like. 
+    puts "\nWelcome to Chess!
+    \nTo play, input coordinates to select the piece you'd like.
     \nThen input the coordinates of where you'd like to move. I.e A2 (return) A4 (return)
     \nYou can save at any point by pressing the 'S' key. To quit press 'Q'.
     \nTo load a saved game, press 'L'.
@@ -51,5 +51,4 @@ class Prompts
   def play_again_message
     puts "Would you like to play again? [Y/N]"
   end
-
 end
