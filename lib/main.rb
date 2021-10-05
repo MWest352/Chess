@@ -15,11 +15,15 @@ board = Board.new
 display = Display.new(board)
 
 prompts = Prompts.new
+king = King.new
 
 def dirty_game_script(prompts, display)
   system 'clear'
   prompts.welcome
   display.print_board
 end
+
+
+puts king.display_king
 
 dirty_game_script(prompts, display)
