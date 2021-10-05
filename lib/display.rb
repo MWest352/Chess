@@ -23,7 +23,7 @@ class Display
   end
 
   def format_board
-    @board.each_index{ |index| puts "#{8 - index} #{@board[index]} #{8 - index}" }
+    @board.each_index { |index| puts "#{8 - index} #{@board[index]} #{8 - index}" }
   end
 
   def header_footer
