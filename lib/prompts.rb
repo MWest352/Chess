@@ -23,7 +23,7 @@ class Prompts
       mode
     else
       puts "\nEntry Error: Please pick a mode, 1, 2, Load, or Quit."
-      select_mode
+      select_mode_input
     end
   end
 
