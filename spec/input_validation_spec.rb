@@ -45,7 +45,7 @@ describe Prompts do
       it 'Stops loop and does not display error message' do
         error_message = "Invalid entry. Enter coordinates to select a piece."
         expect(subject).not_to receive(:puts).with(error_message)
-        subject.select_piece_input
+        subject.coordinate_input
       end
 
       context 'When user inputs an invalid input, then a valid input' do
@@ -60,7 +60,7 @@ describe Prompts do
         it 'Completes loop and displays error message three times' do
           error_message = "Invalid entry. Enter coordinates to select a piece."
           expect(subject).to receive(:puts).with(error_message).exactly(3).times
-          subject.select_piece_input
+          subject.coordinate_input
         end
       end
     end

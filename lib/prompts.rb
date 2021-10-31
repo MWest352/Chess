@@ -43,19 +43,19 @@ class Prompts
     puts "Enter coordinates to select a piece."
   end
 
-  def select_piece_input
+  def coordinate_input
     input = gets.chomp.downcase
     return input if input.length == 2 && input.chars[0] =~ /[a-h]/ && input.chars[1] =~ /[1-8]/
 
-    select_piece_input_error
-    select_piece_input
+    coordinate_input_error
+    coordinate_input
   end
 
   def movement_input
     puts "Enter coordinates to move piece."
   end
 
-  def select_piece_input_error
+  def coordinate_input_error
     puts "Invalid entry. Enter coordinates to select a piece."
   end
 
