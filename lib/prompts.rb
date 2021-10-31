@@ -27,12 +27,28 @@ class Prompts
     end
   end
 
-  def quit_input
+  def quit_prompt
     puts "Are you sure you'd like to quit? [Y/N]"
+    quit_input
+  end
+
+  def quit_input
+    input = gets.chomp.upcase
+    return exit if input == Y
+
+    select_piece_prompt
+  end
+
+  def select_piece_prompt
+    puts "Enter coordinates to select a piece."
   end
 
   def select_piece_input
-    puts "Enter coordinates to select a piece."
+    input = gets.chomp.downcase
+    return input if input.length == 2 && input.chars[0] =~ /[a-h]/ && input.chars[1] =~ /[1-8]/
+
+    select_piece_input_error
+    select_piece_input
   end
 
   def movement_input
