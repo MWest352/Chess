@@ -9,7 +9,7 @@ class Knight
   end
 
   def display_knight
-    puts @symbol
+    @symbol
   end
 
   def knight_moves

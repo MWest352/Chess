@@ -5,11 +5,16 @@ require 'colorize'
 # Sets King piece
 class King
   def initialize
-    @symbol = " \u265A"
+    @symbol_w = "\u265A"
+    @symbol_b = "\u2654"
   end
 
-  def display_king
-    puts @symbol
+  def display_king_w
+    @symbol_w
+  end
+
+  def display_king_b
+    @symbol_b
   end
 
   def king_moves

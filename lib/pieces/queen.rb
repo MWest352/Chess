@@ -9,7 +9,7 @@ class Queen
   end
 
   def display_queen
-    puts @symbol
+    @symbol
   end
 
   def queen_moves

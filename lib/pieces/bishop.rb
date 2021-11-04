@@ -9,7 +9,7 @@ class Bishop
   end
 
   def display_bishop
-    puts @symbol
+    @symbol
   end
 
   def bishop_moves

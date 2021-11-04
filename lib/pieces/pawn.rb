@@ -9,7 +9,7 @@ class Pawn
   end
 
   def display_pawn
-    puts @symbol
+    @symbol
   end
 
   def pawn_first_move

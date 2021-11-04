@@ -63,6 +63,19 @@ describe Prompts do
           subject.coordinate_input
         end
       end
+
+      context 'When user wants to quit' do
+        before do
+          valid_input = 'q'
+          allow(subject).to receive(:gets).and_return(valid_input)
+        end
+
+        it 'Stops loop and displays quit prompt' do
+          quit_prompt = "Are you sure you'd like to quit? [Y/N]"
+          expect(subject).to receive(:puts).with(quit_prompt)
+          subject.coordinate_input
+        end
+      end
     end
   end
 end

@@ -29,12 +29,11 @@ class Prompts
 
   def quit_prompt
     puts "Are you sure you'd like to quit? [Y/N]"
-    quit_input
   end
 
   def quit_input
-    input = gets.chomp.upcase
-    return exit if input == Y
+    input = gets.chomp.downcase
+    return exit if input == "y"
 
     select_piece_prompt
   end
@@ -45,10 +44,16 @@ class Prompts
 
   def coordinate_input
     input = gets.chomp.downcase
-    return input if input.length == 2 && input.chars[0] =~ /[a-h]/ && input.chars[1] =~ /[1-8]/
-
-    coordinate_input_error
-    coordinate_input
+    if input.length == 2 && input.chars[0] =~ /[a-h]/ && input.chars[1] =~ /[1-8]/
+      input
+    elsif input == "q"
+      quit_prompt
+    elsif input == "s"
+      game_save
+    else
+      coordinate_input_error
+      coordinate_input
+    end
   end
 
   def movement_input

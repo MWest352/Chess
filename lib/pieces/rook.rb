@@ -9,7 +9,7 @@ class Rook
   end
 
   def display_rook
-    puts @symbol
+    @symbol
   end
 
   def rook_moves
