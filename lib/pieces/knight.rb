@@ -5,11 +5,16 @@ require 'colorize'
 # Sets knight piece
 class Knight
   def initialize
-    @symbol = " \u265E"
+    @symbol_w = "\u265E"
+    @symbol_b = "\u2658"
   end
 
-  def display_knight
-    @symbol
+  def display_knight_w
+    @symbol_w
+  end
+
+  def display_knight_b
+    @symbol_b
   end
 
   def knight_moves

@@ -5,11 +5,16 @@ require 'colorize'
 # Sets pawn piece
 class Pawn
   def initialize
-    @symbol = " \u265F"
+    @symbol_w = "\u265F"
+    @symbol_b = "\u2569"
   end
 
-  def display_pawn
-    @symbol
+  def display_pawn_w
+    @symbol_w
+  end
+
+  def display_pawn_b
+    @symbol_b
   end
 
   def pawn_first_move
