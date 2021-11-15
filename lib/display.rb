@@ -53,10 +53,14 @@ class Display
     @rook_rw = Rook.new
     @rook_lb = Rook.new
     @rook_rb = Rook.new
+    @pawn_b = Pawn.new
+    @pawn_w = Pawn.new
   end
 
   def initial_positions
     create_pieces
+    create_pawn_w
+    create_pawn_b
     board[0][7] = @rook_rw.display_rook_w
     board[0][6] = @knight_rw.display_knight_w
     board[0][5] = @bishop_rw.display_bishop_w
@@ -75,5 +79,14 @@ class Display
     board[7][0] = @rook_lb.display_rook_b
     print_board
   end
+
+  def create_pawn_w
+    board[1].fill(@pawn_w.display_pawn_w)
+  end
+
+  def create_pawn_b
+    board[6].fill(@pawn_b.display_pawn_b)
+  end
+
 
 end
