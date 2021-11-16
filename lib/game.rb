@@ -22,7 +22,7 @@ prompts = Prompts.new
 def dirty_game_script(prompts, display)
   system 'clear'
   prompts.welcome
-  display.initial_positions
+  display.display_initial_positions
 end
 
 
