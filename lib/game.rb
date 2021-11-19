@@ -23,6 +23,33 @@ def dirty_game_script(prompts, display)
   system 'clear'
   prompts.welcome
   display.display_initial_positions
+  select_mode(prompts)
+end
+
+def select_mode(prompts)
+  prompts.select_mode_prompt
+  case prompts.mode
+  when 'q'
+    prompts.quit_input
+  when 'l'
+    load_game
+  when '1'
+    one_player_mode
+  when '2'
+    two_player_mode
+  end
+end
+
+def one_player_mode
+  puts "OPM"
+end
+
+def two_player_mode
+  puts "TPM"
+end
+
+def load_game
+  puts "LG"
 end
 
 

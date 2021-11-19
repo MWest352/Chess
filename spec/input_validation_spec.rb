@@ -6,7 +6,7 @@ require_relative '../lib/prompts.rb'
 describe Prompts do
   subject(:prompt) { described_class.new }
 
-  describe '#select_mode_input' do
+  describe '#verify_mode_input' do
     context 'When input is between accepted paramaters' do
       before do
         valid_input = '2'
@@ -16,7 +16,7 @@ describe Prompts do
       it 'Stops loop and does not display error message' do
         error_message = "\nEntry Error: Please pick a mode, 1, 2, Load, or Quit."
         expect(subject).not_to receive(:puts).with(error_message)
-        subject.select_mode_input
+        subject.verify_mode_input
       end
     end
 
@@ -30,7 +30,7 @@ describe Prompts do
       it 'Completes loop and displays error message once' do
         error_message = "\nEntry Error: Please pick a mode, 1, 2, Load, or Quit."
         expect(subject).to receive(:puts).with(error_message).once
-        subject.select_mode_input
+        subject.verify_mode_input
       end
     end
   end

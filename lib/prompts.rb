@@ -2,6 +2,7 @@
 
 # Prompts for players to follow
 class Prompts
+  attr_accessor :game, :mode
 
   def welcome
     puts "\nWelcome to Chess!
@@ -12,18 +13,18 @@ class Prompts
     \n"
   end
 
-  def select_mode
-    puts "\nPlease select Mode. To load game press 'L'. Would you like to play with 1 player or 2 players? [1/2]"
-    select_mode_input
+  def select_mode_prompt
+    puts "\nPlease select Mode. To load press 'L'. To quit press 'Q' Would you like to play with 1 player or 2 players? [1/2]"
+    verify_mode_input
   end
 
-  def select_mode_input
-    mode = gets.chomp.downcase
-    if mode.to_i.between?(1, 2) || mode == "l" || mode == "q"
-      mode
+  def verify_mode_input
+    @mode = gets.chomp.downcase
+    if @mode.to_i.between?(1, 2) || @mode == "l" || @mode == "q"
+      @mode
     else
       puts "\nEntry Error: Please pick a mode, 1, 2, Load, or Quit."
-      select_mode_input
+      verify_mode_input
     end
   end
 
@@ -32,6 +33,7 @@ class Prompts
   end
 
   def quit_input
+    quit_prompt
     input = gets.chomp.downcase
     return exit if input == "y"
 
